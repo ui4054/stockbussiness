@@ -7,6 +7,7 @@ const PORT = 4000;
 const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./DB.js');
+//const config = require(DB);
 const postRoute = require('./post.route');
 const uri = process.env.MONGODB_URI;
 
