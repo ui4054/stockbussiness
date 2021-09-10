@@ -1,7 +1,7 @@
 const express = require('express')
 const serveStatic = require('serve-static')
 const path = require('path')
-
+const uri = process.env.MONGODB_URI;
 const app = express()
 
 // agregamos el serve que continene el index.html
