@@ -1,0 +1,62 @@
+{
+  "name": "stockbussiness",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "node ./server.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.1",
+    "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "eslint-config-standard": "^16.0.3",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.5",
+    "serve-static": "^1.14.1",
+    "vue": "^2.6.11",
+    "vue-axios": "^3.3.6",
+    "nodemon": "^2.0.12",
+    "vue-router": "^3.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.4",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "^3.1.1",
+    "@vue/cli-service": "^3.12.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "nodemon": "^2.0.12",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-console": "off",
+      "no-unused-vars": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ui4054/stockbussiness.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ui4054/stockbussiness/issues"
+  },
+  "homepage": "https://github.com/ui4054/stockbussiness#readme"
+}
