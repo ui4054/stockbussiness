@@ -22,13 +22,13 @@ const bodyParser2 = require('body-parser');
 const PORT2 = 4000;
 const cors2 = require('cors');
 const mongoose = require('mongoose');
-const config = require('./DB.js');
-const config = require(DB);
+//const config = require('./DB.js');
+//const config = require(DB);
 const postRoute = require('./post.route');
 const uri = process.env.MONGODB_URI;
 
 // variables de entorno locales
-require('dotenv').config({ path: './variables.env'});
+//require('dotenv').config({ path: './variables.env'});
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
  () => { console.log('Database is connected') },
