@@ -6,8 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service",
-    "start": "concurrently \"node ./api/server.js\" \"node ./server.js\"",
-    "postinstall" : "npm run build",
+    "start": "node server.js",
     "dev": "concurrently \"node server.js\" \"node ./api/server.js\""
   },
   "dependencies": {
