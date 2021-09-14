@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service",
-    "start": "node server.js",
+    "start": "node ./api/server.js",
+    "postinstall" : "npm run build",
     "dev": "concurrently \"node server.js\" \"node ./api/server.js\""
   },
   "dependencies": {
@@ -16,6 +17,7 @@
     "concurrently": "^6.2.1",
     "core-js": "^3.6.5",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "eslint-config-standard": "^16.0.3",
     "express": "^4.17.1",
     "mongoose": "^6.0.5",
@@ -30,7 +32,7 @@
     "@babel/eslint-parser": "^7.15.4",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "^3.1.1",
-    "@vue/cli-service": "^3.12.1",
+    "@vue/cli-service": "^4.5.13",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
