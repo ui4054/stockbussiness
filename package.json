@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "node ./server.js",
+    "start": "concurrently \"node server.js\" \"node ./api/server.js\"",
     "dev": "nodemon --watch ./api/server.js"
   },
   "dependencies": {
