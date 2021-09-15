@@ -37,7 +37,7 @@
         }
       },
       created() {
-      let uri = 'https://stkbsprueba.herokuapp.com/posts';
+      let uri = '107.22.57.98:4000/posts';
       this.axios.get(uri).then(response => {
         this.posts = response.data;
       });
@@ -45,7 +45,7 @@
     methods: {
       deletePost(id)
       {
-        let uri = `http://stkbsprueba.herokuapp.com:4000/posts/delete/${id}`;
+        let uri = `107.22.57.98:4000/posts/delete/${id}`;
         this.axios.delete(uri).then(response => {
           this.posts.splice(this.posts.indexOf(id), 1);
         });
