@@ -9,8 +9,12 @@ const app = express()
 // agregamos el serve que continene el index.html
 app.use('/',serveStatic(path.join(__dirname,'/dist')))
 
+
+
 const port = process.env.PORT || 8080
-app.listen(port)
+const host = process.env.HOST || '0.0.0.0'
+const PORT = process.env.PORT || 4000
+app.listen(port,host)
 
 console.log('listening on port: ' + port)
 
@@ -20,6 +24,7 @@ const express2 = require('express');
 const app2 = express2();
 const bodyParser2 = require('body-parser');
 const PORT2 = 4000;
+const HOST = '0.0.0.0';
 const cors2 = require('cors');
 const mongoose = require('mongoose');
 //const config = require('./DB.js');
@@ -41,7 +46,7 @@ app2.use(bodyParser2.json());
 
 app2.use('/posts', postRoute);
 
-app2.listen(PORT2, function(){
+app2.listen(PORT2,host, function(){
 console.log('Server is running on Port:',PORT2);
 });
 
