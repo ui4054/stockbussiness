@@ -3,11 +3,11 @@
   "version": "1.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --mode ",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service",
-    "start": "node server.js",
-    "dev": "concurrently \"node server.js\" \"node ./api/server.js\""
+    "start": "concurrently \"node server_front.js\" \"node ./api/server_api.js\"",
+    "dev": "concurrently \"node server_front.js\" \"node ./api/server_api.js\""
   },
   "dependencies": {
     "axios": "^0.21.4",
