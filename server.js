@@ -40,10 +40,11 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
  err => { console.log('Can not connect to the database'+ err)}
 );
 
+// use the express-static middleware
+app2.use(express.static("public"));
 app2.use(cors2());
 app2.use(bodyParser2.urlencoded({extended: true}));
 app2.use(bodyParser2.json());
-
 app2.use('/posts', postRoute);
 
 app2.listen(PORT2,host, function(){
