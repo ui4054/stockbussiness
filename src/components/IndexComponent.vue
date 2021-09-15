@@ -45,7 +45,7 @@
     methods: {
       deletePost(id)
       {
-        let uri = `https://stkbsprueba.herokuapp.com:4000/posts/delete/${id}`;
+        let uri = `http://stkbsprueba.herokuapp.com:4000/posts/delete/${id}`;
         this.axios.delete(uri).then(response => {
           this.posts.splice(this.posts.indexOf(id), 1);
         });
