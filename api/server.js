@@ -14,7 +14,7 @@ const postRoute = require('./post.route');
 // variables de entorno locales
 require('dotenv').config({ path: './variables.env'});
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
+mongoose.connect(config.DB, { useNewUrlParser: true }).then(
   () => { console.log('Database is connected') },
   err => { console.log('Can not connect to the database'+ err)}
 );

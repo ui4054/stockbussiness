@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service",
-    "start": "node server.js",
+    "start": "concurrently \"node server.js\" \"node ./api/server.js\"",
     "dev": "concurrently \"node server.js\" \"node ./api/server.js\""
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "concurrently": "^6.2.1",
     "core-js": "^3.6.5",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "eslint-config-standard": "^16.0.3",
     "express": "^4.17.1",
     "mongoose": "^6.0.5",
