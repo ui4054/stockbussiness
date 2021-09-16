@@ -37,7 +37,7 @@
         }
       },
       created() {
-      let uri = 'https://stkbsprueba.herokuapp.com//posts';
+      let uri = 'https://stkbsprueba.herokuapp.com/posts';
       this.axios.get(uri).then(response => {
         this.posts = response.data;
       });
