@@ -33,14 +33,14 @@
         }
       },
       created() {
-        let uri = `stkbsprueba.herokuapp.com/posts/edit/${this.$route.params.id}`;
+        let uri = `https://stkbsprueba.herokuapp.com/posts/edit/${this.$route.params.id}`;
         this.axios.get(uri).then((response) => {
             this.post = response.data;
         });
       },
       methods: {
         updatePost() {
-          let uri = `stkbsprueba.herokuapp.com/posts/update/${this.$route.params.id}`;
+          let uri = `https://stkbsprueba.herokuapp.com/posts/update/${this.$route.params.id}`;
           this.axios.post(uri, this.post).then(() => {
             this.$router.push({name: 'posts'});
           });
