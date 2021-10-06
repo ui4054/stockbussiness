@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-variables.env
+/dist
 
 
 # local env files
@@ -21,4 +21,3 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-© 2021 GitHub, Inc.
