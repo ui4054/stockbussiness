@@ -31,6 +31,7 @@
   </div>
 </template>
 
+
 <style>
 #navhome p{ 
 display: inline;
