@@ -13,7 +13,7 @@ Vue.use(VueAxios, axios);
 Vue.config.productionTip = false;
 
 import HomeComponent from './components/HomeComponent.vue';
-import CreateComponent from './components/CreateComponent.vue';
+import CreateComponent from './components/CreateComponent2.vue';
 import IndexComponent from './components/IndexComponent.vue';
 import EditComponent from './components/EditComponent.vue';
 

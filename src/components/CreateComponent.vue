@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label>Post Title:</label>
+            <label>Producto:</label>
             <input type="text" class="form-control" v-model="post.title">
           </div>
         </div>
@@ -13,7 +13,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Post Body:</label>
+              <label>cantidad:</label>
               <textarea class="form-control" v-model="post.body" rows="5"></textarea>
             </div>
           </div>
@@ -34,9 +34,10 @@
     },
     methods: {
       addPost(){
-        let uri = 'https://stkbsprueba.herokuapp.com:/posts/add';
+        let uri = 'https://stkbsprueba.herokuapp.com:/posts/addp';
         this.axios.post(uri, this.post).then(() => {
-          this.$router.push({name: 'posts'});
+          //this.$router.push({name: 'posts'});
+          this.$router.push({name: 'prueba'});
         });
       }
     }
