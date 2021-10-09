@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 //require('dotenv').config({ path: './variables.env'});
 //const mongoose = require('mongoose');
-const postRoute = require('./api/post.route');
+const postRoute = require('./api/post.route2');
 //mongoose.Promise = global.Promise;
 //mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
 //   () => { console.log('Database is connected') },

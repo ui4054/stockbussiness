@@ -55,7 +55,7 @@
     },
     methods: {
       addPost(){
-        let uri = 'https://stkbsprueba.herokuapp.com/posts/add';
+        let uri = 'https://stkbsprueba.herokuapp.com:80/posts/add';
         //let uri = 'http://localhost/posts/add'
         this.axios.post(uri, this.post).then(() => {
           //this.$router.push({name: 'posts'});
