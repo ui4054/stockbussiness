@@ -8,9 +8,9 @@ const app = express()
 // conectamos base de datos
 const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config({ path: './variables.env'});
+//require('dotenv').config({ path: './variables.env'});
 const mongoose = require('mongoose');
-const postRoute = require('./post.route');
+const postRoute = require('./api/post.route');
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
    () => { console.log('Database is connected') },
