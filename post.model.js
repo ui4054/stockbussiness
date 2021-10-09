@@ -16,3 +16,50 @@ let Post = new Schema({
 });
 
 module.exports = mongoose.model('Post', Post);
+
+//---------------
+let Usuario = new Schema({
+  user: {
+    type: String
+  },
+  key: {
+    type: String
+  }
+},{
+    collection: 'usuarios'
+});
+
+module.exports = mongoose.model('Usuario', Usuario);
+
+//--------------codigo para modelo de producto
+let Producto = new Schema({
+  nombre: {
+    type: String
+  },
+  marca: {
+    type: String
+  },
+  cantidad: {
+    type: String
+  },
+  precio: {
+    type: String
+  }
+
+
+},{
+    collection: 'productos'
+});
+
+module.exports = mongoose.model('Producto', Producto);
+
+
+
+
+
+
+
+
+
+
+
