@@ -9,13 +9,13 @@ const app = express()
 const bodyParser = require('body-parser');
 const cors = require('cors');
 //require('dotenv').config({ path: './variables.env'});
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 const postRoute = require('./api/post.route');
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
-   () => { console.log('Database is connected') },
-  err => { console.log('Can not connect to the database'+ err)}
-);
+//mongoose.Promise = global.Promise;
+//mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
+//   () => { console.log('Database is connected') },
+//  err => { console.log('Can not connect to the database'+ err)}
+//);
 
 // agregamos el serve que continene el index.html
 app.use('/',serveStatic(path.join(__dirname,'/dist')))
