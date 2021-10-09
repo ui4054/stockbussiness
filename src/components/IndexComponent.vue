@@ -37,7 +37,8 @@
         }
       },
       created() {
-      let uri = 'https://stkbsprueba.herokuapp.com/posts';
+      //let uri = 'https://stkbsprueba.herokuapp.com/posts';
+      let uri = 'https://localhost/posts';
       this.axios.get(uri).then(response => {
         this.posts = response.data;
       });
@@ -45,7 +46,8 @@
     methods: {
       deletePost(id)
       {
-        let uri = `https://stkbsprueba.herokuapp.com/posts/delete/${id}`;
+        //let uri = `https://stkbsprueba.herokuapp.com/posts/delete/${id}`;
+        let uri = `http://localhost/posts/delete/${id}`;
         this.axios.delete(uri).then(response => {
           this.posts.splice(this.posts.indexOf(id), 1);
         });
