@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="/" id="navhome">
           <img
-            src="../src/assets/foto_1.jpg"
+            src="../src/assets/logotienda.jpg"
             alt=""
             height="65"
             class="d-inline-block align-text-top"
