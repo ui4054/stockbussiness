@@ -50,8 +50,8 @@
         }
       },
       created() {
-        //let uri = `https://stkbsprueba.herokuapp.com/posts/edit/${this.$route.params.id}`;
-        let uri = `http://localhost/posts/edit/${this.$route.params.id}`;
+        let uri = `https://stkbsprueba.herokuapp.com/posts/edit/${this.$route.params.id}`;
+        //let uri = `http://localhost/posts/edit/${this.$route.params.id}`;
         this.axios.get(uri).then((response) => {
             this.post = response.data;
         });
