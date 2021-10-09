@@ -42,6 +42,7 @@
       },
       created() {
       let uri = `https://stkbsprueba.herokuapp.com/posts`;
+      
       //let uri = 'http://localhost/posts';
       this.axios.get(uri).then(response => {
         this.posts = response.data;
