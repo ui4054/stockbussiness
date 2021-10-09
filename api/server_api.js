@@ -12,7 +12,7 @@ const postRoute = require('./post.route2');
 //const uri = process.env.MONGODB_URI;
 
 // variables de entorno locales - dptnev se inactiva en despliegue remoto
-//require('dotenv').config({ path: '../variables.env'});
+require('dotenv').config({ path: './variables.env'});
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
   () => { console.log('Database is connected') },
