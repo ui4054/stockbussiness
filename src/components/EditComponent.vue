@@ -58,8 +58,8 @@
       },
       methods: {
         updatePost() {
-          //let uri = `https://stkbsprueba.herokuapp.com/posts/update/${this.$route.params.id}`;
-          let uri = `http://localhost/posts/update/${this.$route.params.id}`;
+          let uri = `https://stkbsprueba.herokuapp.com/posts/update/${this.$route.params.id}`;
+          //let uri = `http://localhost/posts/update/${this.$route.params.id}`;
           this.axios.post(uri, this.post).then(() => {
             this.$router.push({name: 'posts'});
           });
