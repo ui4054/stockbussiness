@@ -1,25 +1,42 @@
 <template>
   <div>
-    <h1>Edit Post</h1>
+    <h1>Editar Producto</h1>
     <form @submit.prevent="updatePost">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label>Post Title: </label>
-            <input type="text" class="form-control" v-model="post.title">
+            <label>Nombre: </label>
+            <input type="text" class="form-control" v-model="post.nombre">
           </div>
         </div>
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Post Body: </label>
-              <textarea class="form-control" v-model="post.body" rows="5"></textarea>
+              <label>Marca: </label>
+              <input class="form-control" v-model="post.marca" >
             </div>
           </div>
-        </div><br />
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Cantidad: </label>
+              <input class="form-control" v-model="post.cantidad" >
+            </div>
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Precio: </label>
+              <input class="form-control" v-model="post.precio" >
+            </div>
+          </div>
+        </div>               
+        <br />
         <div class="form-group">
-          <button class="btn btn-primary">Update</button>
+          <button class="btn btn-primary">Actualizar</button>
         </div>
     </form>
   </div>

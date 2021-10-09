@@ -1,25 +1,46 @@
 <template>
   <div>
-    <h1>Create A Post</h1>
+    <h1>Crear Pedido</h1>
     <form @submit.prevent="addPost">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label>Producto:</label>
-            <input type="text" class="form-control" v-model="post.title">
+            <label>Nombre:</label>
+            <input type="text" class="form-control" v-model="post.nombre">
           </div>
         </div>
         </div>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>cantidad:</label>
-              <textarea class="form-control" v-model="post.body" rows="5"></textarea>
+              <label>Marca:</label>
+              <input class="form-control" v-model="post.marca" >
             </div>
           </div>
-        </div><br />
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+              <div class="form-group">
+                <label>Cantidad:</label>
+                <input class="form-control" v-model="post.cantidad" >
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+              <div class="form-group">
+                <label>Precio:</label>
+                <input class="form-control" v-model="post.precio" >
+              </div>
+          </div>
+        </div>
+
+
+
+
+        <br />
         <div class="form-group">
-          <button class="btn btn-primary">Create</button>
+          <button class="btn btn-primary">Crear</button>
         </div>
     </form>
   </div>
@@ -35,10 +56,10 @@
     methods: {
       addPost(){
         //let uri = 'https://stkbsprueba.herokuapp.com:/posts/add';
-        let uri = 'localhost:/posts/add'
+        let uri = 'http://localhost/posts/add'
         this.axios.post(uri, this.post).then(() => {
           //this.$router.push({name: 'posts'});
-          this.$router.push({name: 'prueba'});
+          this.$router.push({name: 'posts'}); // el "posts" hace referencia al ruta donde deben ser guardados.
         });
       }
     }

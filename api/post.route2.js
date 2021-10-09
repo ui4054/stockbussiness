@@ -19,7 +19,7 @@ postRoutes.route('/add').post(function (req, res) {
 });
 
 // Defined get data(index or listing) route
-postRoutes.route('/post').get(function (req, res) {
+postRoutes.route('/').get(function (req, res) {
     modelo.find(function(err, posts){
     if(err){
       res.json(err);
@@ -47,8 +47,10 @@ postRoutes.route('/update/:id').post(function (req, res) {
     if (!post)
       res.status(404).send("data is not found");
     else {
-        post.title = req.body.title;
-        post.body = req.body.body;
+        post.nombre = req.body.nombre;
+        post.marca = req.body.marca;
+        post.cantidad = req.body.cantidad;
+        post.precio = req.body.precio;
         post.save().then(() => {
           res.json('Update complete');
       })

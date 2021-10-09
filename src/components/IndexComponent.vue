@@ -14,13 +14,17 @@
             <tr>
               <th>Title</th>
               <th>Body</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
               <th>Actions</th>
             </tr>
             </thead>
             <tbody>
                 <tr v-for="post in posts" :key="post._id">
-                  <td>{{ post.title }}</td>
-                  <td>{{ post.body }}</td>
+                  <td>{{ post.nombre }}</td>
+                  <td>{{ post.marca }}</td>
+                  <td>{{ post.cantidad }}</td>
+                  <td>{{ post.precio }}</td>
                   <td><router-link :to="{name: 'edit', params: { id: post._id }}" class="btn btn-primary">Edit</router-link></td>
                   <td><button class="btn btn-danger" @click.prevent="deletePost(post._id)">Delete</button></td>
                 </tr>
@@ -38,7 +42,7 @@
       },
       created() {
       //let uri = 'https://stkbsprueba.herokuapp.com/posts';
-      let uri = 'https://localhost/posts';
+      let uri = 'http://localhost/posts';
       this.axios.get(uri).then(response => {
         this.posts = response.data;
       });
