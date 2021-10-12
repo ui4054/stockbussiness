@@ -13,7 +13,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Marca: </label>
+              <label>Descripcion: </label>
               <input class="form-control" v-model="post.marca" >
             </div>
           </div>
@@ -21,16 +21,16 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Cantidad: </label>
-              <input class="form-control" v-model="post.cantidad" >
+              <label>Precio: </label>
+              <input class="form-control" v-model="post.precio" >
             </div>
           </div>
         </div> 
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Precio: </label>
-              <input class="form-control" v-model="post.precio" >
+              <label>Cantidad: </label>
+              <input class="form-control" v-model="post.cantidad" >
             </div>
           </div>
         </div>               
@@ -50,16 +50,16 @@
         }
       },
       created() {
-        let uri = `https://stkbsprueba.herokuapp.com/posts/edit/${this.$route.params.id}`;
-        //let uri = `http://localhost/posts/edit/${this.$route.params.id}`;
+        //let uri = `https://stkbsprueba.herokuapp.com/posts/edit/${this.$route.params.id}`;
+        let uri = `http://localhost/posts/edit/${this.$route.params.id}`;
         this.axios.get(uri).then((response) => {
             this.post = response.data;
         });
       },
       methods: {
         updatePost() {
-          let uri = `https://stkbsprueba.herokuapp.com/posts/update/${this.$route.params.id}`;
-          //let uri = `http://localhost/posts/update/${this.$route.params.id}`;
+          //let uri = `https://stkbsprueba.herokuapp.com/posts/update/${this.$route.params.id}`;
+          let uri = `http://localhost/posts/update/${this.$route.params.id}`;
           this.axios.post(uri, this.post).then(() => {
             this.$router.push({name: 'posts'});
           });

@@ -8,7 +8,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./DB.js');
 //const config = require(DB);
-const postRoute = require('./post.route');
+const postRoute = require('./post.route2');
 //const uri = process.env.MONGODB_URI;
 
 // variables de entorno locales

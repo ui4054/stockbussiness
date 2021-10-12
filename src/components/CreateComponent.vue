@@ -13,17 +13,9 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label>Marca:</label>
+              <label>Descripción:</label>
               <input class="form-control" v-model="post.marca" >
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-              <div class="form-group">
-                <label>Cantidad:</label>
-                <input class="form-control" v-model="post.cantidad" >
-              </div>
           </div>
         </div>
         <div class="row">
@@ -33,6 +25,14 @@
                 <input class="form-control" v-model="post.precio" >
               </div>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+              <div class="form-group">
+                <label>Cantidad:</label>
+                <input class="form-control" v-model="post.cantidad" >
+              </div>
+            </div>
         </div>
 
 
@@ -55,8 +55,8 @@
     },
     methods: {
       addPost(){
-        let uri = `https://stkbsprueba.herokuapp.com/posts/add`;
-        //let uri = 'http://localhost/posts/add'
+        //let uri = `https://stkbsprueba.herokuapp.com/posts/add`;
+        let uri = 'http://localhost/posts/add'
         this.axios.post(uri, this.post).then(() => {
           //this.$router.push({name: 'posts'});
           this.$router.push({name: 'posts'}); // el "posts" hace referencia al ruta donde deben ser guardados.
