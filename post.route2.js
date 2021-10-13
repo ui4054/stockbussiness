@@ -4,11 +4,11 @@ const express = require('express');
 const postRoutes = express.Router();
 
 // Require Post model in our routes module
-let Post = require('./post.model');
+let modelo = require('./post.model');
 
 // Defined store route
 postRoutes.route('/add').post(function (req, res) {
-  let post = new Post(req.body);
+  let post = new modelo(req.body);
   post.save()
     .then(() => {
       res.status(200).json({'business': 'business in added successfully'});
@@ -20,7 +20,7 @@ postRoutes.route('/add').post(function (req, res) {
 
 // Defined get data(index or listing) route
 postRoutes.route('/').get(function (req, res) {
-    Post.find(function(err, posts){
+    modelo.find(function(err, posts){
     if(err){
       res.json(err);
     }
@@ -33,7 +33,7 @@ postRoutes.route('/').get(function (req, res) {
 // Defined edit route
 postRoutes.route('/edit/:id').get(function (req, res) {
   let id = req.params.id;
-  Post.findById(id, function (err, post){
+  modelo.findById(id, function (err, post){
       if(err) {
         res.json(err);
       }
@@ -43,12 +43,14 @@ postRoutes.route('/edit/:id').get(function (req, res) {
 
 //  Defined update route
 postRoutes.route('/update/:id').post(function (req, res) {
-    Post.findById(req.params.id, function(err, post) {
+    modelo.findById(req.params.id, function(err, post) {
     if (!post)
       res.status(404).send("data is not found");
     else {
-        post.title = req.body.title;
-        post.body = req.body.body;
+        post.nombre = req.body.nombre;
+        post.marca = req.body.marca;
+        post.cantidad = req.body.cantidad;
+        post.precio = req.body.precio;
         post.save().then(() => {
           res.json('Update complete');
       })
@@ -61,10 +63,11 @@ postRoutes.route('/update/:id').post(function (req, res) {
 
 // Defined delete | remove | destroy route
 postRoutes.route('/delete/:id').delete(function (req, res) {
-    Post.findByIdAndRemove({_id: req.params.id}, function(err){
+    modelo.findByIdAndRemove({_id: req.params.id}, function(err){
         if(err) res.json(err);
         else res.json('Successfully removed');
     });
 });
 
 module.exports = postRoutes;
+

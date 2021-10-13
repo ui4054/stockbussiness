@@ -1,65 +1,23 @@
 {
-  "name": "stockbussiness",
-  "version": "1.1.0",
-  "private": true,
+  "name": "api",
+  "version": "1.0.0",
+  "main": "server_api.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service",
-    "start": "concurrently \"node server.js\" \"node ./api/server.js\"",
-    "dev": "concurrently \"node server.js\" \"node ./api/server.js\""
-  },
-  "dependencies": {
-    "axios": "^0.21.4",
-    "body-parser": "^1.19.0",
-    "bootstrap": "^5.1.1",
-    "concurrently": "^6.2.1",
-    "core-js": "^3.6.5",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "eslint-config-standard": "^16.0.3",
-    "express": "^4.17.1",
-    "mongoose": "^6.0.5",
-    "nodemon": "^2.0.12",
-    "serve-static": "^1.14.1",
-    "vue": "^2.6.11",
-    "vue-axios": "^3.3.6",
-    "vue-router": "^3.5.2"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/eslint-parser": "^7.15.4",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "^3.1.1",
-    "@vue/cli-service": "^3.12.1",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "nodemon": "^2.0.12",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "rules": {
-      "no-console": "off",
-      "no-unused-vars": "off"
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "description": "```\r npm install\r ```",
-  "main": "babel.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ui4054/stockbussiness.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server_api.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ui4054/stockbussiness/issues"
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.5"
   },
-  "homepage": "https://github.com/ui4054/stockbussiness#readme"
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "description": ""
 }
