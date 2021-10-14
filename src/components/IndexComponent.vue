@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-10"></div>
           <div class="col-md-2">
-            <router-link :to="{ name: 'create' }" class="btn btn-primary">Crear Productot</router-link>
+            <router-link :to="{ name: 'create' }" class="btn btn-primary">Crear Producto</router-link>
           </div>
         </div><br />
 

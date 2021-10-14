@@ -54,26 +54,26 @@ let Producto = new Schema({
 module.exports = mongoose.model('Producto', Producto);
 
 //--------------codigo para modelo de producto
-let ProductoNancy = new Schema({
-  nombre: {
-    type: String
-  },
-  descrip: {
-    type: String
-  },
-  precio: {
-    type: String
-  },
-  cantidad: {
-    type: String
-  }
+l//et ProductoNancy = new Schema({
+  //nombre: {
+    //type: String
+  //},
+  //descrip: {
+    //type: String
+  //},
+  //precio: {
+    //type: String
+  //},
+  //cantidad: {
+    //type: String
+  //}
 
 
-},{
-    collection: 'productos_nancy'
-});
+//},{
+    //collection: 'productos_nancy'
+//});
 
-module.exports = mongoose.model('ProductoNancy', ProductoNancy);
+//module.exports = mongoose.model('ProductoNancy', ProductoNancy);
 
 
 
