@@ -54,7 +54,7 @@ let Producto = new Schema({
 module.exports = mongoose.model('Producto', Producto);
 
 //--------------codigo para modelo de producto
-l//et ProductoNancy = new Schema({
+//let ProductoNancy = new Schema({
   //nombre: {
     //type: String
   //},
