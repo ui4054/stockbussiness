@@ -3,13 +3,13 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const PORT = 443;
+const PORT = 80;
 const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./DB.js');
 //const config = require(DB);
 const postRoute = require('./post.route2');
-const uri = process.env.MONGODB_URI;
+//const uri = process.env.MONGODB_URI;
 
 // variables de entorno locales - dptnev se inactiva en despliegue remoto
 //require('dotenv').config({ path: './variables.env'});
